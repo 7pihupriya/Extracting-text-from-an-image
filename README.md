@@ -1,5 +1,5 @@
 # Extracting-text-from-an-image
-Objective : Detecting machine-readable-zones in a passport image
+## Objective : Detecting machine-readable-zones in a passport image
 
 The MRZ region in passports or travel cards fall into two classes: 
 Type 1 and Type 3. Type 1 MRZs are three lines, with each line containing 30 characters. 
@@ -11,5 +11,6 @@ import our necessary packages. And have OpenCV installed already. We’ll also n
 
  Loads our original image from disk and resizes it to have a maximum height of 390 pixels.
  ![shanti](https://user-images.githubusercontent.com/53252686/86601213-a881ed00-bfbe-11ea-9037-24142ff444b9.jpeg)
+ 
 
-  ##jhhih
+ 
