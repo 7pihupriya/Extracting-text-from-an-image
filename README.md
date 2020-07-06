@@ -40,7 +40,13 @@ Here we perform another closing operation, this time using our square kernel. Th
 
 ## Contours
 
-The last step is to find the contours of our thresholded image. We then take these contours and sort them based on their size in descending order and use contour properties to identify the MRZ.We start looping over our sorted list of contours. For each of these contours, we’ll compute the bounding box and use it to compute two properties: the aspect ratio and the coverage ratio. The aspect ratio is simply the width of the bounding box divided by the height. The coverage ratio is the width of the bounding box divided by the width of the actual image.The MRZ is rectangular, with a width that is much larger than the height. The MRZ should also span at least 75% of the input image.Extract the ROI from the image and draw a bounding box surrounding the MRZ
+The last step is to find the contours of our thresholded image. We then take these contours and sort them based on their size in descending order and use contour properties to identify the MRZ.We start looping over our sorted list of contours. For each of these contours, we’ll compute the bounding box and use it to compute two properties: the aspect ratio and the coverage ratio. The aspect ratio is simply the width of the bounding box divided by the height. The coverage ratio is the width of the bounding box divided by the width of the actual image.The MRZ is rectangular, with a width that is much larger than the height. The MRZ should also span at least 75% of the input image.
+![Final_Image](https://user-images.githubusercontent.com/53252686/86606500-b5560f00-bfc5-11ea-991e-6d8125b3453a.jpg)
+
+
+Extract the ROI from the image and draw a bounding box surrounding the MRZ
+![roi](https://user-images.githubusercontent.com/53252686/86606886-331a1a80-bfc6-11ea-877f-8c6faa411fc5.jpeg)
+
 
 
 
