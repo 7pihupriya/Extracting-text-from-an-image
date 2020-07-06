@@ -31,20 +31,24 @@ We then apply a blackhat morphological operation to the blurred, grayscale image
 
 The next step is to try to detect the actual lines of the MRZ:
 First, we apply a closing operation using our rectangular kernel. This closing operation is meant to close gaps in between MRZ characters. We then apply thresholding using Otsu’s method to automatically threshold the image:
+
 ![rectthresh](https://user-images.githubusercontent.com/53252686/86604950-abcba780-bfc3-11ea-8825-5903aaea0d21.jpg)
 ###### Applying a closing operation using a rectangular kernel to close gaps in between the MRZ characters
 
 Here we perform another closing operation, this time using our square kernel. This kernel is used to close gaps between the individual lines of the MRZ.A series of erosions  are then performed to break apart connected components that may have been joined during the closing operation.
+
 ![sqthresh](https://user-images.githubusercontent.com/53252686/86605472-6065c900-bfc4-11ea-9c7f-4a1366512013.jpg)
 ###### A second closing operation is performed, this time using a square kernel to close the gaps in between individual MRZ lines.
 
 ## Contours
 
 The last step is to find the contours of our thresholded image. We then take these contours and sort them based on their size in descending order and use contour properties to identify the MRZ.We start looping over our sorted list of contours. For each of these contours, we’ll compute the bounding box and use it to compute two properties: the aspect ratio and the coverage ratio. The aspect ratio is simply the width of the bounding box divided by the height. The coverage ratio is the width of the bounding box divided by the width of the actual image.The MRZ is rectangular, with a width that is much larger than the height. The MRZ should also span at least 75% of the input image.
+
 ![Final_Image](https://user-images.githubusercontent.com/53252686/86606500-b5560f00-bfc5-11ea-991e-6d8125b3453a.jpg)
 
 
-Extract the ROI from the image and draw a bounding box surrounding the MRZ
+Extract the ROI from the image and draw a bounding box surrounding the MRZ.
+
 ![roi](https://user-images.githubusercontent.com/53252686/86606886-331a1a80-bfc6-11ea-877f-8c6faa411fc5.jpeg)
 
 
