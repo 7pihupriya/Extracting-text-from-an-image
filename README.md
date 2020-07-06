@@ -8,3 +8,6 @@ In either case, the MRZ encodes identifying information of a given citizen, incl
 
 MRZ detection using only basic image processing techniques such as thresholding, morphological operations, and contour properties. 
 import our necessary packages. And have OpenCV installed already. We’ll also need imutils, my collection of convenience functions to make basic image processing operations with OpenCV easier. We can install imutils  using pip.
+
+ Loads our original image from disk and resizes it to have a maximum height of 390 pixels.
+  
