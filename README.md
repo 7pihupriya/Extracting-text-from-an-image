@@ -21,6 +21,7 @@ Load the image, resize it, and convert it to grayscale
 Gaussian blurring is applied to reduce high frequency noise. Smooth the image using a 5x5 Gaussian.
 
 ![grayscale_array](https://user-images.githubusercontent.com/53252686/86603311-79b94600-bfc1-11ea-9108-46e055da7bd8.jpeg)
+###### Applying Gaussian Blurring to resized image.
 
 ## Blackhat Operation
 
