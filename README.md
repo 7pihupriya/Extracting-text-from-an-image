@@ -1,4 +1,4 @@
-# Extracting-text-from-an-image
+# Extracting-text-from-Passport
 ## Objective : Detecting machine-readable-zones in a passport image
 
 The MRZ region in passports or travel cards fall into two classes: 
